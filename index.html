@@ -2,580 +2,486 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rakib Mahmud Nadir | Offensive Security & Penetration Testing</title>
   <meta name="description"
-    content="Offensive security portfolio of Rakib Mahmud Nadir – junior penetration tester specializing in web and network security, Active Directory assessments and red team style attack simulations." />
-  <link rel="stylesheet" href="styles.css" />
+    content="Rakib Mahmud Nadir — Junior Offensive Security Expert specializing in penetration testing, Active Directory attacks, web and network security assessments.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Rakib Mahmud Nadir | Offensive Security & Penetration Testing">
+  <meta property="og:description"
+    content="Junior Offensive Security Expert specializing in penetration testing, Active Directory attacks, and red team engagements.">
+  <meta property="og:image" content="image/rakib.png">
+  <meta property="og:url" content="https://rakibnadir.github.io">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rakib Mahmud Nadir | Offensive Security & Penetration Testing">
+  <meta name="twitter:description"
+    content="Junior Offensive Security Expert specializing in penetration testing, Active Directory attacks, and red team engagements.">
+  <meta name="twitter:image" content="image/rakib.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="image/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <!-- Background Video -->
-  <div class="video-background">
-    <video autoplay muted loop playsinline id="bg-video">
-      <source src="Video/video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="video-overlay"></div>
-  </div>
-  <div class="noise-overlay"></div>
 
-  <!-- Header / Nav -->
-  <header class="site-header">
-    <div class="container nav-container">
-      <div class="logo">
-        <img src="image/logo.png" alt="Rakib Nadir Logo" class="logo-img">
-        <span class="logo-text">Rakib Nadir</span>
-      </div>
-      <nav class="nav">
-        <button class="nav-toggle" aria-label="Toggle navigation">
-          ☰
-        </button>
-        <ul class="nav-links">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#offsec">Offensive Security</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#certs">Certifications</a></li>
-          <li><a href="#achievements">Achievements</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#community">Community & Speaking</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+  <!-- Particle Canvas Background -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <img src="image/logo.png" alt="Rakib Nadir Logo" class="nav-logo-img">
+        <span>Rakib Nadir</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#methodology" class="nav-link">Methodology</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#credentials" class="nav-link">Credentials</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#content" class="nav-link">Content</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-  </header>
+  </nav>
 
-  <!-- Hero -->
-  <section id="hero" class="hero reveal">
-    <div class="container hero-grid">
-      <!-- Left -->
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="hero-container">
       <div class="hero-text">
-        <p class="hero-tag">Offensive Security · Penetration Testing · Red Team</p>
-
-        <div class="hero-title-wrap">
-          <h1 class="hero-title">
-            Helping you find vulnerabilities before attackers do.
-          </h1>
-          <div class="hero-title-glow"></div>
-        </div>
-
-        <p class="hero-subtitle">
-          Junior Penetration Tester specializing in web and network security, Active Directory assessments, and
-          realistic adversary-style attack simulations.
-        </p>
-
+        <p class="hero-tagline">Offensive Security · Penetration Testing · Red Team</p>
+        <h1 class="hero-title">Helping you find vulnerabilities <span class="highlight">before attackers do.</span></h1>
+        <p class="hero-subtitle">Junior Penetration Tester specializing in web and network security, Active Directory
+          assessments, and realistic adversary-style attack simulations.</p>
         <div class="hero-buttons">
-          <a href="#projects" class="btn neutral">View Attack Simulations</a>
-          <a href="#offsec" class="btn neutral">Review Methodology</a>
-          <a href="Rakib_Nadir_2026.pdf" download class="btn primary cv-download">
-            <span class="icon">↓</span> Download Resume
-          </a>
+          <a href="#projects" class="btn btn-primary">View Attack Simulations</a>
+          <a href="#methodology" class="btn btn-secondary">Review Methodology</a>
+          <a href="Rakib_Nadir_2026.pdf" class="btn btn-outline" download>Download Resume</a>
+        </div>
+        <div class="hero-pills">
+          <span class="pill">Active Directory</span>
+          <span class="pill">Web Security</span>
+          <span class="pill">Network Security</span>
         </div>
       </div>
-
-      <!-- Right -->
-      <div class="hero-right">
-        <div class="hero-card">
-          <p class="hero-card-label">Profile Snapshot</p>
-
-          <div class="hero-stats">
-            <div class="stat">
-              <span class="stat-number">Focus</span>
-              <span class="stat-label">Enterprise Security </span>
-            </div>
-            <div class="stat">
-              <span class="stat-number">Role</span>
-              <span class="stat-label">Penetration Tester</span>
-            </div>
-            <div class="stat">
-              <span class="stat-number">Status</span>
-              <span class="stat-label">Certified (CRTP, eJPT, CRTA, CNSP)</span>
-            </div>
+      <div class="hero-card">
+        <div class="stat-grid">
+          <div class="stat-item">
+            <span class="stat-value">Certified</span>
+            <span class="stat-label">Offensive Security</span>
           </div>
-
-          <div class="hero-card-footer">
-            <span class="hero-pill">Active Directory</span>
-            <span class="hero-pill">Web Security</span>
-            <span class="hero-pill">Network Security</span>
+          <div class="stat-item">
+            <span class="stat-value">∞</span>
+            <span class="stat-label">Always Learning</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">AD</span>
+            <span class="stat-label">Domain Dominance</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">Building</span>
+            <span class="stat-label">Red Team Career</span>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="scroll-indicator">
-      <span>Scroll to About Me</span>
-      <div class="scroll-line"></div>
-    </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="section reveal">
-    <div class="container section-grid">
-
-      <!-- LEFT — About text -->
-      <div class="about-content">
-        <h2 class="section-title">About Me</h2>
-        <p>
-          I am an offensive security practitioner focused on web application security, network penetration testing and
-          Active Directory
-          assessments. My work emphasizes manual enumeration, attack-path discovery and controlled
-          exploitation to demonstrate how real-world breaches occur, rather than relying solely on automated scanning
-          tools. My experience is built through extensive hands-on practice in realistic lab environments, Active
-          Directory test networks and CTF-style scenarios. I specialize in identifying misconfigurations, abusing
-          identity and access weaknesses, and validating exploitation paths across web and internal networks. Beyond
-          exploitation, I document root causes and provide clear remediation guidance to help defensive teams reduce
-          real risk, while currently pursuing my studies at Khulna University of Engineering and Technology (KUET)
-          in Khulna, Bangladesh.
-
-        </p>
-      </div>
-
-      <!-- RIGHT — Profile Image -->
-      <div class="about-media">
-        <div class="about-photo-card">
-          <img src="image/rakib.png" alt="Rakib Mahmud Nadir portrait" class="about-photo" />
-        </div>
-      </div>
-    </div>
-
-    <div class="scroll-indicator">
-      <span>Scroll to view methodology</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- Offensive Security Focus -->
-  <section id="offsec" class="section section-alt reveal">
+  <!-- ========== ABOUT ========== -->
+  <section class="section" id="about">
     <div class="container">
-      <h2 class="section-title">Offensive Security Methodology</h2>
-      <p class="section-intro">
-        Adversary-aligned testing focused on realistic attack paths and business risk.
-      </p>
+      <h2 class="section-title reveal">About <span class="highlight">Me</span></h2>
+      <div class="about-grid reveal">
+        <div class="about-text">
+          <p>I'm <strong>Rakib Mahmud Nadir</strong>, a junior offensive security professional with a strong passion for
+            penetration testing and adversary simulation. I focus on manual enumeration, Active Directory attack chains,
+            and web/network exploitation to identify and demonstrate real-world security weaknesses.</p>
+          <p>My approach emphasizes realistic threat modeling — from initial reconnaissance through lateral movement to
+            domain compromise — mirroring the tactics used by real-world adversaries. I hold certifications including
+            <strong>CRTP</strong>, <strong>eJPT</strong>, <strong>CRTA</strong>, and <strong>CNSP</strong>.
+          </p>
+          <p>Currently pursuing a Bachelor's degree in Urban and Regional Planning at <strong>Khulna University of
+              Engineering & Technology (KUET)</strong>, expected December 2027. My cybersecurity journey runs parallel
+            to my academic studies, driven by curiosity and a commitment to ethical hacking.</p>
+        </div>
+        <div class="about-image">
+          <div class="about-photo-card">
+            <div class="about-photo">
+              <img src="image/rakib.png" alt="Rakib Mahmud Nadir" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <div class="kill-chain">
-        <div class="kill-step">
-          <span class="step-id">01</span>
+  <!-- ========== TOOLS & TECHNOLOGIES ========== -->
+  <section class="section" id="tools">
+    <div class="container">
+      <h2 class="section-title reveal">Tools & <span class="highlight">Technologies</span></h2>
+      <div class="tools-categories reveal">
+        <div class="tool-category">
+          <h4 class="tool-category-title">Scanning & Enumeration</h4>
+          <div class="tool-list">
+            <span class="tool-chip">Nmap</span>
+            <span class="tool-chip">Burp Suite</span>
+            <span class="tool-chip">Wireshark</span>
+            <span class="tool-chip">PowerView</span>
+          </div>
+        </div>
+        <div class="tool-category">
+          <h4 class="tool-category-title">Exploitation Frameworks</h4>
+          <div class="tool-list">
+            <span class="tool-chip">Metasploit</span>
+            <span class="tool-chip">Impacket</span>
+            <span class="tool-chip">Mimikatz</span>
+            <span class="tool-chip">Hashcat</span>
+          </div>
+        </div>
+        <div class="tool-category">
+          <h4 class="tool-category-title">Active Directory</h4>
+          <div class="tool-list">
+            <span class="tool-chip">BloodHound</span>
+            <span class="tool-chip">Kerberos</span>
+            <span class="tool-chip">Active Directory</span>
+          </div>
+        </div>
+        <div class="tool-category">
+          <h4 class="tool-category-title">Scripting & Automation</h4>
+          <div class="tool-list">
+            <span class="tool-chip">PowerShell</span>
+            <span class="tool-chip">Bash</span>
+            <span class="tool-chip">Python</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== METHODOLOGY ========== -->
+  <section class="section" id="methodology">
+    <div class="container">
+      <h2 class="section-title reveal">Offensive Security <span class="highlight">Methodology</span></h2>
+      <div class="methodology-grid reveal">
+        <div class="method-card">
+          <div class="method-number">01</div>
           <h3>Reconnaissance</h3>
-          <p>
-            Identify exposed assets and entry points.
-          </p>
+          <p>Identify exposed assets and entry points.</p>
         </div>
-        <div class="kill-step">
-          <span class="step-id">02</span>
+        <div class="method-card">
+          <div class="method-number">02</div>
           <h3>Initial Access</h3>
-          <p>
-            Gain controlled footholds through misconfigurations or logic flaws.
-          </p>
+          <p>Gain controlled footholds through misconfigurations or logic flaws.</p>
         </div>
-        <div class="kill-step">
-          <span class="step-id">03</span>
+        <div class="method-card">
+          <div class="method-number">03</div>
           <h3>Post-Exploitation</h3>
-          <p>
-            Escalate privileges and move laterally to demonstrate impact.
-          </p>
+          <p>Escalate privileges and move laterally to demonstrate impact.</p>
         </div>
-        <div class="kill-step">
-          <span class="step-id">04</span>
+        <div class="method-card">
+          <div class="method-number">04</div>
           <h3>Reporting</h3>
-          <p>
-            Document attack paths and remediation priorities.
-          </p>
+          <p>Document attack paths and remediation priorities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCE ========== -->
+  <section class="section" id="experience">
+    <div class="container">
+      <h2 class="section-title reveal">Professional <span class="highlight">Experience</span></h2>
+      <div class="timeline reveal">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Assistant Mentor – Offensive Security</h3>
+              <span class="timeline-date">Dec 2025 – Present</span>
+            </div>
+            <p class="timeline-company">Hack Secure, India · Remote</p>
+            <ul class="timeline-list">
+              <li>Mentored interns in pentesting labs, CTFs, and real-world simulations</li>
+              <li>Improved enumeration, reporting, and ethical tool use workflows</li>
+              <li>Guidance on recon, exploitation, privilege escalation, and remediation</li>
+              <li>Contributed write-ups and lab insights</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Cybersecurity Intern</h3>
+              <span class="timeline-date">Oct 2024 – Dec 2024</span>
+            </div>
+            <p class="timeline-company">Hack Secure, India · Remote</p>
+            <ul class="timeline-list">
+              <li>Vulnerability scans, directory enumeration, misconfiguration discovery</li>
+              <li>Web/network pentests using Nmap, Burp Suite, Metasploit, Wireshark</li>
+              <li>Hash cracking with Hashcat, credential strength evaluation</li>
+              <li>Security reports and developer remediation support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CREDENTIALS ========== -->
+  <section class="section" id="credentials">
+    <div class="container">
+      <h2 class="section-title reveal">Certifications & <span class="highlight">Achievements</span></h2>
+
+      <h3 class="subsection-title reveal">Certifications</h3>
+      <div class="credentials-grid reveal" id="certifications-grid">
+        <!-- Rendered by JS -->
+      </div>
+
+      <h3 class="subsection-title reveal">Achievements</h3>
+      <div class="credentials-grid reveal" id="achievements-grid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS / ATTACK SIMULATIONS ========== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title reveal">Attack <span class="highlight">Simulations</span></h2>
+      <div class="projects-grid reveal">
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="PDF/cover_report.png" alt="Web Application Penetration Testing Report" loading="lazy">
+          </div>
+          <div class="project-body">
+            <span class="project-pill">Web Pentest</span>
+            <h3>Web Application Penetration Testing Report</h3>
+            <p>Comprehensive web application security assessment including OWASP Top 10 vulnerability analysis,
+              authentication testing, and injection attack vectors.</p>
+            <div class="project-tags">
+              <span>Burp Suite</span>
+              <span>OWASP</span>
+              <span>SQL Injection</span>
+            </div>
+            <a href="PDF/Web-Application-Penetration-Testing-Report.pdf" class="btn btn-sm" download>Download Report</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="professional images/harvest.jpg" alt="Remote & Local Credential Harvesting" loading="lazy">
+          </div>
+          <div class="project-body">
+            <span class="project-pill">Infrastructure</span>
+            <h3>Remote & Local Credential Harvesting in AD</h3>
+            <p>Demonstrated credential harvesting techniques in Active Directory environments using Mimikatz, SAM dumps,
+              LSASS extraction, and DCSync attacks.</p>
+            <div class="project-tags">
+              <span>Mimikatz</span>
+              <span>Active Directory</span>
+              <span>Credential Theft</span>
+            </div>
+            <a href="https://www.linkedin.com/in/rakib-nadir" class="btn btn-sm" target="_blank" rel="noopener">View on
+              LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="professional images/unconstrained.png" alt="Kerberos Unconstrained Delegation" loading="lazy">
+          </div>
+          <div class="project-body">
+            <span class="project-pill">Infrastructure</span>
+            <h3>Kerberos Unconstrained Delegation Abuse</h3>
+            <p>Full exploitation of Kerberos unconstrained delegation misconfigurations to achieve domain-level
+              compromise through TGT extraction and impersonation.</p>
+            <div class="project-tags">
+              <span>Kerberos</span>
+              <span>Delegation</span>
+              <span>Domain Admin</span>
+            </div>
+            <a href="https://www.linkedin.com/in/rakib-nadir" class="btn btn-sm" target="_blank" rel="noopener">View on
+              LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="professional images/adminsdholder.png" alt="AdminSDHolder Persistence" loading="lazy">
+          </div>
+          <div class="project-body">
+            <span class="project-pill">Infrastructure</span>
+            <h3>AdminSDHolder Persistence & ACL Security</h3>
+            <p>Demonstrated persistence through AdminSDHolder ACL abuse, maintaining backdoor access to privileged AD
+              groups through SDProp propagation.</p>
+            <div class="project-tags">
+              <span>AdminSDHolder</span>
+              <span>ACL Abuse</span>
+              <span>Persistence</span>
+            </div>
+            <a href="https://www.linkedin.com/in/rakib-nadir" class="btn btn-sm" target="_blank" rel="noopener">View on
+              LinkedIn</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTENT ========== -->
+  <section class="section" id="content">
+    <div class="container">
+      <h2 class="section-title reveal">Community & <span class="highlight">Content</span></h2>
+
+      <!-- Speaking -->
+      <h3 class="subsection-title reveal">Speaking</h3>
+      <div class="speaking-card reveal">
+        <div class="speaking-info">
+          <h4>Cybersecurity Essentials & Career Guidelines</h4>
+          <p class="speaking-meta">📅 February 15, 2026 · Live Webinar</p>
+          <ul>
+            <li>Cybersecurity basics and common attack vectors</li>
+            <li>Career paths in offensive & defensive security</li>
+            <li>Portfolio building and certification guidance</li>
+          </ul>
+        </div>
+        <div class="speaking-image">
+          <img src="image/webinar_poster.jpg" alt="Webinar Poster" loading="lazy">
         </div>
       </div>
 
-
-    </div>
-  </section>
-
-  <!-- Experience -->
-  <section id="experience" class="section reveal">
-    <div class="container">
-      <h2 class="section-title">Experience</h2>
-
-      <div class="timeline">
-        <article class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>Assistant Mentor — Offensive Security (Remote)</h3>
-            <p class="timeline-meta">Hack Secure · India · Dec 2024 — Present</p>
-            <ul>
-              <li>
-                Guide and support cybersecurity interns through structured penetration-testing exercises, lab
-                environments, and CTF-style challenges.
-              </li>
-              <li>
-                Help interns improve methodology, enumeration workflow, reporting quality, and responsible use of
-                offensive security tools.
-              </li>
-              <li>
-                Provide mentorship around real-world attack chains from recon and exploitation to privilege escalation
-                and remediation planning.
-              </li>
-              <li>
-                Contribute writeups, lab insights, and best-practice guidance to the program.
-              </li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>Cybersecurity Intern (Remote)</h3>
-            <p class="timeline-meta">Hack Secure · India · Oct 2024 – Dec 2024</p>
-            <ul>
-              <li>
-                Performed vulnerability scans and directory enumeration to identify exposed hosts, services, and
-                configuration weaknesses.
-
-              </li>
-              <li>
-                Conducted web and network penetration tests using Metasploit, Burp Suite, Nmap and Wireshark in guided
-                scenarios.
-
-              <li>
-                Cracked password hashes with Hashcat and reported weak credential patterns and risks to stakeholders.
-
-              </li>
-              <li>
-                Produced structured security assessment reports and collaborated with development and security teams on
-                remediation plans.
-
-              </li>
-            </ul>
-          </div>
-        </article>
+      <!-- Blog -->
+      <h3 class="subsection-title reveal">Latest Blog Posts</h3>
+      <div class="blog-grid reveal" id="blog-grid">
+        <!-- Rendered by JS (Medium RSS or fallback) -->
+      </div>
+      <div class="blog-cta reveal">
+        <a href="https://medium.com/@rakib_nadir" class="btn btn-primary" target="_blank" rel="noopener">Read more on
+          Medium</a>
       </div>
     </div>
   </section>
 
-
-  <!-- Certifications & Achievements -->
-  <section id="certs" class="section reveal">
+  <!-- ========== CONTACT ========== -->
+  <section class="section" id="contact">
     <div class="container">
-      <h2 class="section-title">Certifications</h2>
-      <div id="certifications-grid" class="certifications-grid">
-        <!-- Certifications will be rendered here by script.js -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Achievements Section -->
-  <section id="achievements" class="section reveal">
-    <div class="container">
-      <h2 class="section-title">Achievements</h2>
-      <div id="achievements-grid" class="certifications-grid">
-        <!-- Achievements will be rendered here by script.js -->
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Projects -->
-  <section id="projects" class="section section-alt reveal">
-    <div class="container">
-      <h2 class="section-title">Attack Simulations &amp; Lab Work</h2>
-      <p class="section-intro">
-        A selected portfolio of complex engagement simulations and advanced laboratory attacks.
-      </p>
-
-      <div class="projects-grid">
-
-        <article class="project-card reveal">
-          <div class="project-image">
-            <img src="PDF/cover_report.png" alt="Web Application Penetration Testing Report Cover" loading="lazy" />
-          </div>
-          <div class="project-header">
-            <span class="project-pill">Pentest Report</span>
-            <h3>Web Application Penetration Testing Report</h3>
-          </div>
-          <p>
-            Comprehensive assessment detailing critical web vulnerabilities, impact analysis, and remediation strategies
-            for hardening business-critical applications.
-          </p>
-          <ul class="project-tags">
-            <li>Web Pentest</li>
-            <li>Vulnerability Assessment</li>
-            <li>Remediation</li>
+      <h2 class="section-title reveal">Get In <span class="highlight">Touch</span></h2>
+      <div class="contact-grid reveal">
+        <div class="contact-info">
+          <h3>Let's connect</h3>
+          <p>I'm always interested in discussing new security challenges, research collaborations, or potential
+            opportunities. Feel free to reach out through any of the channels below.</p>
+          <ul class="contact-list">
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <a href="mailto:sec.rakibnadir@gmail.com">sec.rakibnadir@gmail.com</a>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <a href="tel:+8801785029110">+880 1785 029 110</a>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+              <a href="https://linkedin.com/in/rakib-nadir" target="_blank"
+                rel="noopener">linkedin.com/in/rakib-nadir</a>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>Jamalpur, Bangladesh</span>
+            </li>
           </ul>
-          <div class="project-actions" style="margin-top: 1.25rem;">
-            <a href="PDF/Web-Application-Penetration-Testing-Report.pdf" download class="btn primary cv-download">
-              <span class="icon">↓</span> Download Report
-            </a>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-image">
-            <img src="professional images/harvest.jpg" alt="Remote & Local Credential Harvesting Lab Cover"
-              loading="lazy" />
-          </div>
-          <div class="project-header">
-            <span class="project-pill">Red Team Lab</span>
-            <h3>Remote & Local Credential Harvesting in AD</h3>
-          </div>
-          <p>
-            Controlled AD lab demonstrating harvesting techniques using Mimikatz and Overpass-the-Hash. Focused on
-            lateral movement and privilege escalation in a realistic environment.
-          </p>
-          <ul class="project-tags">
-            <li>Red Teaming</li>
-            <li>AD Security</li>
-            <li>Kerberos / NTLM</li>
-            <li>Mimikatz</li>
-          </ul>
-          <div class="project-actions" style="margin-top: 1.25rem;">
-            <a href="https://www.linkedin.com/posts/rakib-nadir_cybersecurity-ethicalhacking-activedirectory-activity-7392831584179175424-GSJV"
-              target="_blank" rel="noopener" class="btn primary cv-download">
-              <span class="icon">→</span> View Attack Walkthrough
-            </a>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-image">
-            <img src="professional images/unconstrained.png" alt="Kerberos Unconstrained Delegation Lab Cover"
-              loading="lazy" />
-          </div>
-          <div class="project-header">
-            <span class="project-pill">Red Team Lab</span>
-            <h3>Kerberos Unconstrained Delegation Abuse</h3>
-          </div>
-          <p>
-            Simulated "double-hop" attacks using printer triggers to capture TGTs, demonstrating how delegated services
-            can lead to total domain-wide privilege escalation.
-          </p>
-          <ul class="project-tags">
-            <li>AD Security</li>
-            <li>Kerberos</li>
-            <li>Delegation Abuse</li>
-            <li>Privilege Escalation</li>
-          </ul>
-          <div class="project-actions" style="margin-top: 1.25rem;">
-            <a href="https://www.linkedin.com/posts/rakib-nadir_activedirectory-kerberos-delegation-activity-7398313053513142272-wkYq"
-              target="_blank" rel="noopener" class="btn primary cv-download">
-              <span class="icon">→</span> View Attack Walkthrough
-            </a>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-image">
-            <img src="professional images/adminsdholder.png" alt="AdminSDHolder Persistence Lab Cover" loading="lazy" />
-          </div>
-          <div class="project-header">
-            <span class="project-pill">Red Team Lab</span>
-            <h3>AdminSDHolder Persistence & ACL Security</h3>
-          </div>
-          <p>
-            Analyzed AD persistence via AdminSDHolder and SDProp. Demonstrated how modifying protected ACLs grants
-            persistent access by overriding standard permission inheritance.
-          </p>
-          <ul class="project-tags">
-            <li>AD Persistence</li>
-            <li>ACL Security</li>
-            <li>SDProp</li>
-            <li>Privilege Escalation</li>
-          </ul>
-          <div class="project-actions" style="margin-top: 1.25rem;">
-            <a href="https://www.linkedin.com/posts/rakib-nadir_activedirectory-adminsdholder-privilegeescalation-activity-7395079195841921024-E574"
-              target="_blank" rel="noopener" class="btn primary cv-download">
-              <span class="icon">→</span> View Attack Walkthrough
-            </a>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Community & Speaking -->
-  <section id="community" class="section reveal">
-    <div class="container">
-      <h2 class="section-title">Community & Speaking</h2>
-      <p class="section-intro">
-        Engaging with the cybersecurity community through webinars, workshops, and speaking engagements.
-      </p>
-
-      <div class="timeline" style="margin-top: 2rem;">
-        <article class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="speaking-grid">
-              <div class="speaking-text">
-                <h3>Speaker — Cybersecurity Essentials & Career Guidelines</h3>
-                <p class="timeline-meta">February 15, 2026 · Live Online Webinar</p>
-                <p>
-                  Delivered a focused session on cybersecurity fundamentals, real-world attack techniques, and career
-                  direction in offensive and defensive security.
-                </p>
-
-                <h4 style="font-size: 0.95rem; color: var(--text-heading); margin-bottom: 0.4rem; font-weight: 600;">Key
-                  Topics:</h4>
-                <ul>
-                  <li>Cybersecurity basics and ethical hacking boundaries</li>
-                  <li>Common attacks: Phishing, Malware, DoS, SQLi, XSS</li>
-                  <li>Career paths and certification roadmap</li>
-                  <li>Portfolio building and resume strategy</li>
-                </ul>
-              </div>
-
-              <!-- Webinar Poster Image -->
-              <div class="speaking-image">
-                <img src="image/webinar_poster.jpg" alt="Cybersecurity Essentials & Career Guidelines Webinar Poster"
-                  class="speaking-poster">
-              </div>
+        </div>
+        <div class="contact-form-wrapper">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="Your Name">
             </div>
-          </div>
-        </article>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Write your message..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          </form>
+        </div>
       </div>
     </div>
   </section>
 
-
-  <!-- Medium Blog Section -->
-  <section id="blog" class="section reveal">
-    <div class="container">
-      <h2 class="section-title">Medium Blog</h2>
-      <p class="section-intro">
-        I write about offensive security labs, CTF walkthroughs, and practical
-        penetration testing workflows. Here are a few recent posts.
-      </p>
-
-      <div class="projects-grid">
-        <!-- Post 1 -->
-        <article class="project-card reveal">
-          <div class="project-image">
-            <img src="image/powershell.webp" alt="Advanced PowerShell Security Medium article cover" loading="lazy" />
-          </div>
-          <div class="project-header">
-            <span class="project-pill">Medium</span>
-            <h3>
-              Advanced PowerShell Security: Defense in Depth &amp; Adversarial Bypasses
-            </h3>
-          </div>
-          <p>
-            Deep dive into hardening PowerShell and layering defensive controls to counter modern adversarial bypass
-            techniques.
-          </p>
-          <ul class="project-tags">
-            <li>PowerShell</li>
-            <li>Defense in Depth</li>
-            <li>Detection &amp; Evasion</li>
-          </ul>
-          <div class="project-actions" style="margin-top: 1.25rem;">
-            <a href="https://medium.com/@rakib_nadir/advanced-powershell-security-defense-in-depth-and-adversarial-bypasses-e1d35a12b792"
-              target="_blank" rel="noopener" class="btn primary cv-download">
-              <span class="icon">→</span> View Full Blog
-            </a>
-          </div>
-        </article>
-
-        <!-- Post 2 -->
-        <article class="project-card reveal">
-          <div class="project-image">
-            <img src="image/querier.webp" alt="Hack The Box Querier write-up cover" loading="lazy" />
-          </div>
-          <div class="project-header">
-            <span class="project-pill">Medium</span>
-            <h3>
-              Hack The Box: Querier – Full Walkthrough
-            </h3>
-          </div>
-          <p>
-            Step-by-step walkthrough of the HTB Querier machine, covering Windows enumeration, exploitation, and
-            privilege escalation.
-          </p>
-          <ul class="project-tags">
-            <li>Hack The Box</li>
-            <li>Windows Exploitation</li>
-            <li>Privilege Escalation</li>
-          </ul>
-          <div class="project-actions" style="margin-top: 1.25rem;">
-            <a href="https://medium.com/@rakib_nadir/hack-the-box-querier-writeup-f53f05cd09c6" target="_blank"
-              rel="noopener" class="btn primary cv-download">
-              <span class="icon">→</span> View Full Blog
-            </a>
-          </div>
-        </article>
-
-        <!-- Post 3 -->
-        <article class="project-card reveal">
-          <div class="project-image">
-            <img src="image/startup.webp" alt="TryHackMe Startup CTF write-up cover" loading="lazy" />
-          </div>
-          <div class="project-header">
-            <span class="project-pill">Medium</span>
-            <h3>
-              TryHackMe: Startup – CTF Write-Up
-            </h3>
-          </div>
-          <p>
-            Practical CTF write-up for the Startup room, covering web exploitation and lateral movement in a
-            small-business lab.
-          </p>
-          <ul class="project-tags">
-            <li>TryHackMe</li>
-            <li>Web Exploitation</li>
-            <li>CTF Walkthrough</li>
-          </ul>
-          <div class="project-actions" style="margin-top: 1.25rem;">
-            <a href="https://medium.com/@rakib_nadir/tryhackme-startup-ctf-write-up-8a2ced838e51" target="_blank"
-              rel="noopener" class="btn primary cv-download">
-              <span class="icon">→</span> View Full Blog
-            </a>
-          </div>
-        </article>
-      </div>
-
-      <div class="hero-buttons" style="margin-top: 2rem;">
-        <a href="https://medium.com/@rakib_nadir" target="_blank" rel="noopener" class="btn outline">
-          Read more on Medium
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="currentYear"></span> Rakib Mahmud Nadir. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://linkedin.com/in/rakib-nadir" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
         </a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Contact -->
-  <section id="contact" class="section section-alt reveal">
-    <div class="container contact-left">
-      <div>
-        <h2 class="section-title">Contact</h2>
-        <p class="section-intro">
-          I’m open to opportunities as a Junior Penetration Tester, Red Team Trainee,
-          or Security Analyst (offensive focus). If you are looking for someone who
-          can methodically attack and help harden your environment, let’s talk.
-        </p>
-        <ul class="contact-list">
-          <li><strong>Email:</strong> <a href="mailto:sec.rakibnadir@gmail.com">sec.rakibnadir@gmail.com</a></li>
-          <li><strong>Phone:</strong> <a href="tel:+8801785029110">+880&nbsp;1785&nbsp;029&nbsp;110</a></li>
-          <li>
-            <strong>LinkedIn:</strong>
-            <a href="https://linkedin.com/in/rakib-nadir" target="_blank" rel="noopener">
-              linkedin.com/in/rakib-nadir
-            </a>
-          </li>
-          <li><strong>Location:</strong> Jamalpur, Bangladesh</li>
-        </ul>
-      </div>
-    </div> <!-- end .container -->
-  </section> <!-- end #contact -->
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-flex">
-      <p>© <span id="year"></span> Rakib Mahmud Nadir · Offensive Security Portfolio.</p>
-      <div class="footer-links">
-        <a href="https://linkedin.com/in/rakib-nadir" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="#hero">Back to top ↑</a>
+        <a href="https://github.com/rakibnadir" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+          </svg>
+        </a>
+        <a href="https://medium.com/@rakib_nadir" target="_blank" rel="noopener" aria-label="Medium">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
+          </svg>
+        </a>
+        <a href="https://tryhackme.com/p/rakibnadir" target="_blank" rel="noopener" aria-label="TryHackMe">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M10.705 0C7.54 0 4.902 2.285 4.349 5.291a4.525 4.525 0 00-4.107 4.5 4.525 4.525 0 004.52 4.52h6.392V0h-.449zm2.59 0v14.311h6.39a4.525 4.525 0 004.52-4.52 4.525 4.525 0 00-4.106-4.5C19.545 2.285 16.907 0 13.742 0h-.448zM10.705 16.986H4.762a4.525 4.525 0 00-4.52 4.52A2.494 2.494 0 002.736 24h8.418V16.986h-.449zm2.59 0V24h8.417a2.494 2.494 0 002.494-2.494 4.525 4.525 0 00-4.52-4.52h-6.39z" />
+          </svg>
+        </a>
       </div>
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 
