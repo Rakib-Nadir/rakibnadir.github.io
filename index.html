@@ -51,7 +51,6 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#home" class="nav-link active">Home</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#methodology" class="nav-link">Methodology</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
         <li><a href="#credentials" class="nav-link">Credentials</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
@@ -76,7 +75,6 @@
           assessments, and realistic adversary-style attack simulations.</p>
         <div class="hero-buttons">
           <a href="#projects" class="btn btn-primary">View Attack Simulations</a>
-          <a href="#methodology" class="btn btn-secondary">Review Methodology</a>
           <a href="Rakib_Nadir_2026.pdf" class="btn btn-outline" download>Download Resume</a>
         </div>
         <div class="hero-pills">
@@ -136,77 +134,6 @@
     </div>
   </section>
 
-  <!-- ========== TOOLS & TECHNOLOGIES ========== -->
-  <section class="section" id="tools">
-    <div class="container">
-      <h2 class="section-title reveal">Tools & <span class="highlight">Technologies</span></h2>
-      <div class="tools-categories reveal">
-        <div class="tool-category">
-          <h4 class="tool-category-title">Scanning & Enumeration</h4>
-          <div class="tool-list">
-            <span class="tool-chip">Nmap</span>
-            <span class="tool-chip">Burp Suite</span>
-            <span class="tool-chip">Wireshark</span>
-            <span class="tool-chip">PowerView</span>
-          </div>
-        </div>
-        <div class="tool-category">
-          <h4 class="tool-category-title">Exploitation Frameworks</h4>
-          <div class="tool-list">
-            <span class="tool-chip">Metasploit</span>
-            <span class="tool-chip">Impacket</span>
-            <span class="tool-chip">Mimikatz</span>
-            <span class="tool-chip">Hashcat</span>
-          </div>
-        </div>
-        <div class="tool-category">
-          <h4 class="tool-category-title">Active Directory</h4>
-          <div class="tool-list">
-            <span class="tool-chip">BloodHound</span>
-            <span class="tool-chip">Kerberos</span>
-            <span class="tool-chip">Active Directory</span>
-          </div>
-        </div>
-        <div class="tool-category">
-          <h4 class="tool-category-title">Scripting & Automation</h4>
-          <div class="tool-list">
-            <span class="tool-chip">PowerShell</span>
-            <span class="tool-chip">Bash</span>
-            <span class="tool-chip">Python</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== METHODOLOGY ========== -->
-  <section class="section" id="methodology">
-    <div class="container">
-      <h2 class="section-title reveal">Offensive Security <span class="highlight">Methodology</span></h2>
-      <div class="methodology-grid reveal">
-        <div class="method-card">
-          <div class="method-number">01</div>
-          <h3>Reconnaissance</h3>
-          <p>Identify exposed assets and entry points.</p>
-        </div>
-        <div class="method-card">
-          <div class="method-number">02</div>
-          <h3>Initial Access</h3>
-          <p>Gain controlled footholds through misconfigurations or logic flaws.</p>
-        </div>
-        <div class="method-card">
-          <div class="method-number">03</div>
-          <h3>Post-Exploitation</h3>
-          <p>Escalate privileges and move laterally to demonstrate impact.</p>
-        </div>
-        <div class="method-card">
-          <div class="method-number">04</div>
-          <h3>Reporting</h3>
-          <p>Document attack paths and remediation priorities.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ========== EXPERIENCE ========== -->
   <section class="section" id="experience">
@@ -271,6 +198,27 @@
     <div class="container">
       <h2 class="section-title reveal">Attack <span class="highlight">Simulations</span></h2>
       <div class="projects-grid reveal">
+
+        <div class="project-card">
+          <div class="project-image" style="height: 250px; overflow: hidden;">
+            <img src="project/portfolio-image_page-0001.png" alt="Multi-Forest Active Directory Lab" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="project-body">
+            <span class="project-pill">Infrastructure</span>
+            <h3>Multi-Forest Active Directory Lab</h3>
+            <p>Built a complex, four-segment AD lab simulating real-world attack paths like network pivoting, trust relationship exploits, and cross-forest compromise.</p>
+            <div class="project-tags">
+              <span>Active Directory</span>
+              <span>Penetration Testing</span>
+              <span>Network Pivoting</span>
+            </div>
+            <div class="project-actions" style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <a href="project/ad-lab-config-v3.pdf" class="btn btn-sm" download>Download Config Guide</a>
+              <a href="https://www.linkedin.com/posts/rakib-nadir_cybersecurity-penetrationtesting-activedirectory-ugcPost-7435680888320978944-896A?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFco4AkB2S8_06e77nMJlrO6CYfZcE0Hl4E" 
+                 class="btn btn-sm btn-secondary" target="_blank" rel="noopener">View POC</a>
+            </div>
+          </div>
+        </div>
 
         <div class="project-card">
           <div class="project-image">
