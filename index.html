@@ -81,6 +81,12 @@
           <span class="pill">Active Directory</span>
           <span class="pill">Web Security</span>
           <span class="pill">Network Security</span>
+          <span class="pill">AI / LLM Security</span>
+        </div>
+        <div class="hero-pills" style="margin-top: 8px;">
+          <span class="pill">SOC</span>
+          <span class="pill">Python</span>
+          <span class="pill">Bash</span>
         </div>
       </div>
       <div class="hero-card">
@@ -112,15 +118,23 @@
       <h2 class="section-title reveal">About <span class="highlight">Me</span></h2>
       <div class="about-grid reveal">
         <div class="about-text">
-          <p>I'm <strong>Rakib Mahmud Nadir</strong>, a junior offensive security professional with a strong passion for
+          <p>I'm <strong style="color: var(--accent);">Rakib Mahmud Nadir</strong>, a junior offensive security
+            professional with a strong passion for
             penetration testing and adversary simulation. I focus on manual enumeration, Active Directory attack chains,
-            and web/network exploitation to identify and demonstrate real-world security weaknesses.</p>
+            web/network exploitation, Python/Bash scripting, and AI/LLM security research to identify and demonstrate
+            real-world security
+            weaknesses.</p>
           <p>My approach emphasizes realistic threat modeling — from initial reconnaissance through lateral movement to
-            domain compromise — mirroring the tactics used by real-world adversaries. I hold certifications including
-            <strong>CRTP</strong>, <strong>eJPT</strong>, <strong>CRTA</strong>, and <strong>CNSP</strong>.
+            domain compromise — mirroring tactics used by real-world adversaries. I hold certifications including
+            <strong style="color: var(--accent);">CRTP</strong>, <strong style="color: var(--accent);">eJPTv2</strong>,
+            <strong style="color: var(--accent);">CRTA</strong>, <strong style="color: var(--accent);">CNSP</strong>,
+            <strong style="color: var(--accent);">CSEDP</strong>, and <strong
+              style="color: var(--accent);">CJWPT</strong>, with <strong style="color: var(--accent);">CRTO</strong>
+            currently in progress.
           </p>
-          <p>Currently pursuing a Bachelor's degree in Urban and Regional Planning at <strong>Khulna University of
-              Engineering & Technology (KUET)</strong>, expected December 2027. My cybersecurity journey runs parallel
+          <p>Currently pursuing a Bachelor's degree in Urban and Regional Planning at <strong
+              style="color: var(--accent);">Khulna University of Engineering and Technology (KUET)</strong>
+            (expected December 2027). Ranked in the top 1% globally on TryHackMe. My cybersecurity journey runs parallel
             to my academic studies, driven by curiosity and a commitment to ethical hacking.</p>
         </div>
         <div class="about-image">
@@ -160,7 +174,11 @@
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-header">
-              <h3>Cybersecurity Intern</h3>
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <h3>Cybersecurity Intern</h3>
+                <a href="https://verification.givemycertificate.com/v/85b521c8-9aad-4136-86b6-7525ad9ce5d0"
+                  class="credential-link" target="_blank" rel="noopener" style="font-size: 0.8rem;">Verify →</a>
+              </div>
               <span class="timeline-date">Oct 2024 – Dec 2024</span>
             </div>
             <p class="timeline-company">Hack Secure, India · Remote</p>
@@ -196,8 +214,56 @@
   <!-- ========== PROJECTS / ATTACK SIMULATIONS ========== -->
   <section class="section" id="projects">
     <div class="container">
-      <h2 class="section-title reveal">Attack <span class="highlight">Simulations</span></h2>
+      <h2 class="section-title reveal">My <span class="highlight">Projects</span></h2>
       <div class="projects-grid reveal">
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="Projects/Adversarial LLM Security.jpg" alt="Adversarial LLM Security Assessment" loading="lazy">
+          </div>
+          <div class="project-body">
+            <span class="project-pill">AI / LLM Security</span>
+            <h3>Adversarial LLM Security Assessment</h3>
+            <p>Built and pentested a local multi-model AI environment using Ollama, evaluating Mistral, Qwen, Gemma,
+              Granite, and LLaMA against real-world adversarial techniques. Conducted automated prompt injection testing
+              using Garak v0.14 across 768 attack attempts. Mistral:7b rated DC-2 (Very High Risk). Fingerprinted a live
+              RAG-powered chatbot backend using LLMap. Built and open-sourced garak-report-to-excel for structured
+              vulnerability reporting.</p>
+            <div class="project-tags">
+              <span>LLM Security</span>
+              <span>Prompt Injection</span>
+              <span>Garak</span>
+              <span>Ollama</span>
+              <span>LLMap</span>
+              <span>Python</span>
+              <span>OWASP LLM Top 10</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/Rakib-Nadir/adversarial-llm-security-assessment" class="btn btn-sm" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="Projects/Garak report to excel.png" alt="garak-report-to-excel" loading="lazy">
+          </div>
+          <div class="project-body">
+            <span class="project-pill">Open Source Tool / Python</span>
+            <h3>garak-report-to-excel</h3>
+            <p>A Python utility that parses raw Garak LLM vulnerability scanner .jsonl report files into structured Excel spreadsheets. Built to solve the problem of unreadable Garak output during adversarial LLM security research.</p>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>Garak</span>
+              <span>LLM Security</span>
+              <span>Automation</span>
+              <span>Excel</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/Rakib-Nadir/garak-report-to-excel" class="btn btn-sm" target="_blank" rel="noopener">View on GitHub →</a>
+            </div>
+          </div>
+        </div>
 
         <div class="project-card">
           <div class="project-image">
@@ -206,35 +272,75 @@
           <div class="project-body">
             <span class="project-pill">Infrastructure</span>
             <h3>Multi-Forest Active Directory Lab</h3>
-            <p>Built a complex, four-segment AD lab simulating real-world attack paths like network pivoting, trust relationship exploits, and cross-forest compromise.</p>
+            <p>Built a fully isolated enterprise-grade AD environment across four network segments — enterprise.dc
+              (Primary Forest), corp.enterprise.dc (Child Domain), and manufacturing.local (Secondary Forest). Simulates
+              real-world attack paths including network pivoting, trust relationship attacks, privilege escalation
+              across domain boundaries, and cross-forest compromise via bidirectional forest trust.</p>
             <div class="project-tags">
               <span>Active Directory</span>
               <span>Penetration Testing</span>
               <span>Network Pivoting</span>
+              <span>Kerberos</span>
+              <span>Red Team</span>
             </div>
             <div class="project-actions" style="display: flex; gap: 10px; flex-wrap: wrap;">
-              <a href="project/ad-lab-config-v3.pdf" class="btn btn-sm" download>Download Config Guide</a>
-              <a href="https://www.linkedin.com/posts/rakib-nadir_cybersecurity-penetrationtesting-activedirectory-ugcPost-7435680888320978944-896A?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFco4AkB2S8_06e77nMJlrO6CYfZcE0Hl4E" 
-                 class="btn btn-sm btn-secondary" target="_blank" rel="noopener">View POC</a>
+              <a href="https://github.com/Rakib-Nadir/multi-forest-ad-lab" class="btn btn-sm" target="_blank" rel="noopener">View on GitHub</a>
+              <a href="project/ad-lab-config-v3.pdf" class="btn btn-sm btn-secondary" download>Download Config Guide</a>
+              <a href="https://www.linkedin.com/posts/rakib-nadir_cybersecurity-penetrationtesting-activedirectory-ugcPost-7435680888320978944-896A?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFco4AkB2S8_06e77nMJlrO6CYfZcE0Hl4E"
+                class="btn btn-sm btn-secondary" target="_blank" rel="noopener">View POC</a>
             </div>
           </div>
         </div>
 
         <div class="project-card">
           <div class="project-image">
-            <img src="PDF/cover_report.png" alt="Web Application Penetration Testing Report" loading="lazy">
+            <img src="Projects/Grey Box Report.png" alt="Web App Security Assessment (Grey Box)" loading="lazy">
           </div>
           <div class="project-body">
             <span class="project-pill">Web Pentest</span>
-            <h3>Web Application Penetration Testing Report</h3>
-            <p>Comprehensive web application security assessment including OWASP Top 10 vulnerability analysis,
-              authentication testing, and injection attack vectors.</p>
+            <h3>Web App Security Assessment (Grey Box)</h3>
+            <p>Conducted a Grey Box penetration test on a self-hosted web application. Identified critical
+              vulnerabilities including weak JWT implementation leading to account takeover, XSS enabling session
+              hijacking, authentication flaws, and insecure transport mechanisms. Findings manually validated with
+              actionable remediation aligned to OWASP and PTES.</p>
             <div class="project-tags">
               <span>Burp Suite</span>
               <span>OWASP</span>
+              <span>JWT</span>
+              <span>XSS</span>
               <span>SQL Injection</span>
+              <span>Grey Box</span>
             </div>
-            <a href="PDF/Web-Application-Penetration-Testing-Report.pdf" class="btn btn-sm" download>Download Report</a>
+            <div class="project-actions" style="display: flex; gap: 10px; margin-top: 20px;">
+              <a href="https://github.com/Rakib-Nadir/web-app-greybox-pentest" class="btn btn-sm" target="_blank" rel="noopener">View on GitHub</a>
+              <a href="PDF/Web-Application-Penetration-Testing-Report.pdf" class="btn btn-sm btn-secondary" download>Download Report</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="Projects/Phishing Analysis.png" alt="Phishing Email Analysis" loading="lazy">
+          </div>
+          <div class="project-body">
+            <span class="project-pill">SOC / Forensics</span>
+            <h3>Phishing Email Analysis</h3>
+            <p>Conducted structured forensic analysis of a phishing email impersonating a major brand. Performed full
+              email header inspection, sender infrastructure tracing, and SPF/DKIM/DMARC verification. Analyzed embedded
+              URL using VirusTotal, URLVoid, and PhishTool, confirming an active credential harvesting portal.
+              Documented findings in a structured SOC report with IOC summary and containment recommendations.</p>
+            <div class="project-tags">
+              <span>Forensic Analysis</span>
+              <span>Anti-phishing</span>
+              <span>SOC</span>
+              <span>CTI</span>
+              <span>Incident Response</span>
+              <span>PhishTool</span>
+            </div>
+            <div class="project-actions" style="display: flex; gap: 10px; margin-top: 20px;">
+              <a href="https://github.com/Rakib-Nadir/phishing-email-analysis" class="btn btn-sm" target="_blank" rel="noopener">View on GitHub</a>
+              <a href="https://www.linkedin.com/posts/rakib-nadir_cybersecurity-ethicalhacking-activedirectory-activity-7392831584179175424-GSJV/" class="btn btn-sm btn-secondary" target="_blank" rel="noopener">View on LinkedIn</a>
+            </div>
           </div>
         </div>
 
@@ -245,16 +351,20 @@
           <div class="project-body">
             <span class="project-pill">Infrastructure</span>
             <h3>Remote & Local Credential Harvesting in AD</h3>
-            <p>Demonstrated credential harvesting techniques in Active Directory environments using Mimikatz, SAM dumps,
-              LSASS extraction, and DCSync attacks.</p>
+            <p>Demonstrated credential harvesting in Active Directory using Mimikatz, SAM dumps, LSASS extraction,
+              DCSync attacks, and Overpass-the-Hash / Pass-the-Ticket techniques. Highlights precise execution to avoid
+              triggering service loops, with lateral movement simulation across AD environments.</p>
             <div class="project-tags">
               <span>Mimikatz</span>
               <span>Active Directory</span>
+              <span>DCSync</span>
+              <span>Kerberos</span>
               <span>Credential Theft</span>
             </div>
-            <a href="https://www.linkedin.com/posts/rakib-nadir_cybersecurity-ethicalhacking-activedirectory-activity-7392831584179175424-GSJV/"
-              class="btn btn-sm" target="_blank" rel="noopener">View on
-              LinkedIn</a>
+            <div class="project-actions" style="display: flex; gap: 10px; margin-top: 20px;">
+              <a href="https://www.linkedin.com/posts/rakib-nadir_cybersecurity-ethicalhacking-activedirectory-activity-7392831584179175424-GSJV/"
+                class="btn btn-sm" target="_blank" rel="noopener">View on LinkedIn</a>
+            </div>
           </div>
         </div>
 
@@ -271,10 +381,12 @@
               <span>Kerberos</span>
               <span>Delegation</span>
               <span>Domain Admin</span>
+              <span>Active Directory</span>
             </div>
-            <a href="https://www.linkedin.com/posts/rakib-nadir_activedirectory-kerberos-delegation-activity-7398313053513142272-wkYq/"
-              class="btn btn-sm" target="_blank" rel="noopener">View on
-              LinkedIn</a>
+            <div class="project-actions" style="display: flex; gap: 10px; margin-top: 20px;">
+              <a href="https://www.linkedin.com/posts/rakib-nadir_activedirectory-kerberos-delegation-activity-7398313053513142272-wkYq/"
+                class="btn btn-sm" target="_blank" rel="noopener">View on LinkedIn</a>
+            </div>
           </div>
         </div>
 
@@ -284,17 +396,19 @@
           </div>
           <div class="project-body">
             <span class="project-pill">Infrastructure</span>
-            <h3>AdminSDHolder Persistence & ACL Security</h3>
+            <h3>AdminSDHolder Persistence & ACL Abuse</h3>
             <p>Demonstrated persistence through AdminSDHolder ACL abuse, maintaining backdoor access to privileged AD
               groups through SDProp propagation.</p>
             <div class="project-tags">
               <span>AdminSDHolder</span>
               <span>ACL Abuse</span>
               <span>Persistence</span>
+              <span>Active Directory</span>
             </div>
-            <a href="https://www.linkedin.com/posts/rakib-nadir_activedirectory-adminsdholder-privilegeescalation-activity-7395079195841921024-E574/"
-              class="btn btn-sm" target="_blank" rel="noopener">View on
-              LinkedIn</a>
+            <div class="project-actions" style="display: flex; gap: 10px; margin-top: 20px;">
+              <a href="https://www.linkedin.com/posts/rakib-nadir_activedirectory-adminsdholder-privilegeescalation-activity-7395079195841921024-E574/"
+                class="btn btn-sm" target="_blank" rel="noopener">View on LinkedIn</a>
+            </div>
           </div>
         </div>
 
@@ -327,7 +441,117 @@
       <!-- Blog -->
       <h3 class="subsection-title reveal">Latest Blog Posts</h3>
       <div class="blog-grid reveal" id="blog-grid">
-        <!-- Rendered by JS (Medium RSS or fallback) -->
+
+        <div class="blog-card">
+          <div class="blog-card-image">
+            <img src="Medium Blog/Exception.jpg" alt="Breaking Exception — Blog Post Header" loading="lazy">
+          </div>
+          <div class="blog-card-body">
+            <span
+              style="font-size: 0.82rem; color: var(--accent); margin-bottom: 8px; display: block; font-weight: 500;">March
+              28, 2026</span>
+            <h4>Breaking "Exception" — A Medium Linux Lab Writeup</h4>
+            <p>A walkthrough of the "Exception" challenge lab by Hack Smarter, covering enumeration, exploitation, and
+              privilege escalation on Linux.</p>
+            <a href="https://medium.com/@rakib_nadir/breaking-exception-a-medium-linux-lab-writeup-d998a04ce32e"
+              class="blog-card-link" target="_blank" rel="noopener">Read Article →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-image">
+            <img src="Medium Blog/Learning right way.jpg" alt="How to Start Your Cybersecurity Journey" loading="lazy">
+          </div>
+          <div class="blog-card-body">
+            <span
+              style="font-size: 0.82rem; color: var(--accent); margin-bottom: 8px; display: block; font-weight: 500;">March
+              4, 2026</span>
+            <h4>How to Start Your Cybersecurity Journey as a Student (The Right Way)</h4>
+            <p>A practical guide for students looking to break into cybersecurity — cutting through the noise with
+              actionable steps.</p>
+            <a href="https://medium.com/@rakib_nadir/how-to-start-your-cybersecurity-journey-as-a-student-the-right-way-bda6a04088b5"
+              class="blog-card-link" target="_blank" rel="noopener">Read Article →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-image">
+            <img src="Medium blog/header_Bypass.jpg" alt="When a Single Header Bypasses Your Access Control"
+              loading="lazy">
+          </div>
+          <div class="blog-card-body">
+            <span
+              style="font-size: 0.82rem; color: var(--accent); margin-bottom: 8px; display: block; font-weight: 500;">February
+              13, 2026</span>
+            <h4>When a Single Header Bypasses Your Access Control</h4>
+            <p>A deep dive into access control failures — how a single HTTP header misconfiguration can lead to full
+              authorization bypass.</p>
+            <a href="https://medium.com/@rakib_nadir/when-a-single-header-bypasses-your-access-control-afb4644a632d"
+              class="blog-card-link" target="_blank" rel="noopener">Read Article →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-image">
+            <img src="Medium blog/CRTP Journey.gif" alt="CRTP Exam Preparation and My Experience" loading="lazy">
+          </div>
+          <div class="blog-card-body">
+            <span
+              style="font-size: 0.82rem; color: var(--accent); margin-bottom: 8px; display: block; font-weight: 500;">February
+              9, 2026</span>
+            <h4>CRTP Exam Preparation and My Experience</h4>
+            <p>My preparation strategy, exam experience, and lessons learned from the Certified Red Team Professional
+              exam.</p>
+            <a href="https://medium.com/@rakib_nadir/crtp-exam-preparation-and-my-experience-57e00165ff9a"
+              class="blog-card-link" target="_blank" rel="noopener">Read Article →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-image">
+            <img src="Medium blog/Advance Powershell.jpg" alt="Advanced PowerShell Security" loading="lazy">
+          </div>
+          <div class="blog-card-body">
+            <span
+              style="font-size: 0.82rem; color: var(--accent); margin-bottom: 8px; display: block; font-weight: 500;">January
+              3, 2026</span>
+            <h4>Advanced PowerShell Security: Defense in Depth and Adversarial Bypasses</h4>
+            <p>AMSI bypasses, constrained language mode, and script block logging from an offensive perspective.</p>
+            <a href="https://medium.com/@rakib_nadir/advanced-powershell-security-defense-in-depth-and-adversarial-bypasses-e1d35a12b792"
+              class="blog-card-link" target="_blank" rel="noopener">Read Article →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-image">
+            <img src="Medium blog/Querier.jpg" alt="Hack The Box — Querier Writeup" loading="lazy">
+          </div>
+          <div class="blog-card-body">
+            <span
+              style="font-size: 0.82rem; color: var(--accent); margin-bottom: 8px; display: block; font-weight: 500;">July
+              25, 2025</span>
+            <h4>Hack The Box — Querier Writeup</h4>
+            <p>MSSQL enumeration, xp_cmdshell exploitation, and full domain compromise.</p>
+            <a href="https://medium.com/@rakib_nadir/hack-the-box-querier-writeup-f53f05cd09c6" class="blog-card-link"
+              target="_blank" rel="noopener">Read Article →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-image">
+            <img src="Medium blog/Startup.jpg" alt="TryHackMe — Startup CTF Write-up" loading="lazy">
+          </div>
+          <div class="blog-card-body">
+            <span
+              style="font-size: 0.82rem; color: var(--accent); margin-bottom: 8px; display: block; font-weight: 500;">March
+              5, 2025</span>
+            <h4>TryHackMe — Startup CTF Write-up</h4>
+            <p>FTP enumeration, reverse shells, and Linux privilege escalation on a beginner-level TryHackMe room.</p>
+            <a href="https://medium.com/@rakib_nadir/tryhackme-startup-ctf-write-up-8a2ced838e51" class="blog-card-link"
+              target="_blank" rel="noopener">Read Article →</a>
+          </div>
+        </div>
+
       </div>
       <div class="blog-cta reveal">
         <a href="https://medium.com/@rakib_nadir" class="btn btn-primary" target="_blank" rel="noopener">Read more on

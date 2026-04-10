@@ -193,33 +193,103 @@ const certifications = [
     title: 'CRTP – Certified Red Team Professional',
     issuer: 'Altered Security',
     date: 'January 2026',
-    image: 'image/CRTP.jpg',
+    image: 'certifications/CRTP.jpg',
     proof: 'Credential ID: 0d6a3790',
-    link: 'https://www.credential.net/0d6a3790-31ad-479f-8d39-bb2b137c362f#acc.IwxeF4Um'
+    link: 'https://www.credential.net/0d6a3790-31ad-479f-8d39-bb2b137c362f#acc.IwxeF4Um',
+    status: 'completed'
   },
   {
-    title: 'eJPT – Junior Penetration Tester',
-    issuer: 'INE',
-    date: 'August 2025',
-    image: 'image/eJPT.jpg',
-    proof: 'Credential ID: fe373fe2',
-    link: 'https://certs.ine.com/fe373fe2-8c13-4e7a-a823-a235ae2f9700#acc.gOsExWMA'
+    title: 'CRTO – Certified Red Team Operator',
+    issuer: 'Zero-Point Security',
+    date: '2026',
+    image: '',
+    proof: 'IN PROGRESS',
+    link: '',
+    status: 'in-progress'
   },
   {
     title: 'CRTA – Certified Red Team Analyst',
     issuer: 'CyberWarFare Labs',
     date: 'September 2025',
-    image: 'image/CRTA.jpg',
-    proof: 'Credential verified',
-    link: 'https://labs.cyberwarfare.live/credential/achievement/68c8dd1a40a4bd67bdcba0c7'
+    image: 'certifications/CRTA.jpg',
+    proof: 'Credential ID: 68c8dd1a40a4bd67bdcba0c7',
+    link: 'https://labs.cyberwarfare.live/credential/achievement/68c8dd1a40a4bd67bdcba0c7',
+    status: 'completed'
+  },
+  {
+    title: 'eJPTv2 – Junior Penetration Tester',
+    issuer: 'INE',
+    date: 'August 2025',
+    image: 'certifications/eJPT.jpg',
+    proof: 'Credential ID: fe373fe2',
+    link: 'https://certs.ine.com/fe373fe2-8c13-4e7a-a823-a235ae2f9700#acc.gOsExWMA',
+    status: 'completed'
   },
   {
     title: 'CNSP – Certified Network Security Practitioner',
-    issuer: 'Pentesting Exams',
+    issuer: 'The SecOps Group',
     date: 'December 2025',
-    image: 'image/CNSP.jpg',
+    image: 'certifications/CNSP.jpg',
     proof: 'Credential verified',
-    link: 'https://candidate.speedexam.net/certificate.aspx?SSTATE=am4131EniU8ntjp4bO5mXWylSHxVEdPoseGvIue1kLosShxNyKFht9j+6povCfxxB/NerA5o6lpUfw3Via/ofwUtfItkU5c+P5IX8h8vM6E='
+    link: 'https://candidate.speedexam.net/certificate.aspx?SSTATE=am4131EniU8ntjp4bO5mXWylSHxVEdPoseGvIue1kLosShxNyKFht9j+6povCfxxB/NerA5o6lpUfw3Via/ofwUtfItkU5c+P5IX8h8vM6E=',
+    status: 'completed'
+  },
+  {
+    title: 'CSEDP – Certified Social Engineering Defense Practitioner',
+    issuer: 'The SecOps Group',
+    date: 'April 2026',
+    image: 'certifications/CSEDP.jpg',
+    proof: 'Credential ID: 11260182',
+    link: 'https://candidate.speedexam.net/certificate.aspx?SSTATE=am4131EniU8ntjp4bO5mXVKc/cK44yoRnfbr17DuPzuJQUmW+P5M7vDOM8OBNnLlXsDoF9eZV0Mhi27G3t2jtWVSeEoq7OrFngttX3fEE0E=',
+    status: 'completed'
+  },
+  {
+    title: 'CJWPT – Certified Junior Web Penetration Tester',
+    issuer: 'Hack & Fix',
+    date: 'August 2025',
+    image: 'certifications/CJWPT.jpg',
+    proof: '',
+    credentialId: '2091-5349-7151-6117',
+    link: '',
+    status: 'completed'
+  },
+  {
+    title: 'AI 100: Fundamentals',
+    issuer: 'TCM Security',
+    date: 'March 2026',
+    image: 'certifications/AI Fundamentals.jpg',
+    proof: '',
+    credentialId: 'cert_277wdj5j',
+    link: '',
+    status: 'completed'
+  },
+  {
+    title: 'Practical Help Desk',
+    issuer: 'TCM Security',
+    date: '2026',
+    image: 'certifications/Practical Help Desk.jpg',
+    proof: '',
+    credentialId: 'cert_bcqgb21v',
+    link: '',
+    status: 'completed'
+  },
+  {
+    title: 'Pen Testing Short Course',
+    issuer: 'IT Masters x Charles Sturt University',
+    date: 'April 2025',
+    image: 'certifications/pen testing.jpg',
+    proof: '',
+    link: '',
+    status: 'completed'
+  },
+  {
+    title: 'Networking Certification Essentials',
+    issuer: 'IT Masters',
+    date: '2025',
+    image: 'certifications/networking certification essentials.jpg',
+    proof: '',
+    link: '',
+    status: 'completed'
   }
 ];
 
@@ -231,23 +301,26 @@ const achievements = [
     date: 'April 2025',
     image: 'image/cert.png',
     proof: 'First place in CTF competition',
-    link: 'https://certificate.givemycertificate.com/c/9ed756ff-9ce6-4cf3-b3bf-f2e38574b8c3'
+    link: 'https://certificate.givemycertificate.com/c/9ed756ff-9ce6-4cf3-b3bf-f2e38574b8c3',
+    status: 'completed'
   },
   {
-    title: 'Ranked Top 2% on TryHackMe',
+    title: 'TryHackMe Top 1%',
     issuer: 'TryHackMe',
     date: '2025',
     image: 'image/THM.png',
-    proof: 'Top 2% of all global users',
-    link: 'https://tryhackme.com/p/rakibnadir'
+    proof: 'Top 1% of all global users',
+    link: 'https://tryhackme.com/p/rakibnadir',
+    status: 'completed'
   },
   {
-    title: 'Script Kiddie Rank',
+    title: 'HTB Script Kiddie',
     issuer: 'Hack The Box',
     date: '2025',
     image: 'image/HTB.png',
     proof: 'Active Hack The Box member',
-    link: 'https://app.hackthebox.com/users/2253987'
+    link: 'https://app.hackthebox.com/users/2253987',
+    status: 'completed'
   }
 ];
 
@@ -256,29 +329,55 @@ function renderCredentials(data, containerId) {
   const container = document.getElementById(containerId);
   if (!container) return;
 
-  container.innerHTML = data.map(item => `
-        <div class="credential-card">
+  container.innerHTML = data.map(item => {
+    const isInProgress = item.status === 'in-progress';
+    const cardClass = isInProgress ? 'credential-card credential-in-progress' : 'credential-card';
+    const imageHTML = item.image
+      ? `<img src="${item.image}" alt="${item.title}" loading="lazy">`
+      : `<div class="placeholder-frame"><span>${isInProgress ? 'In Progress' : 'Image coming soon'}</span></div>`;
+    const statusBadge = isInProgress
+      ? `<span class="credential-status-badge">IN PROGRESS</span>`
+      : '';
+
+    // Determine verify element: URL → clickable link, ID only → plain text, neither → nothing
+    let verifyHTML = '';
+    if (item.link) {
+      verifyHTML = `<a href="${item.link}" class="credential-link" target="_blank" rel="noopener">Verify →</a>`;
+    } else if (item.credentialId) {
+      verifyHTML = `<span class="credential-link" style="cursor: default; text-decoration: none;">ID: ${item.credentialId}</span>`;
+    }
+
+    return `
+        <div class="${cardClass}">
             <div class="credential-image">
-                <img src="${item.image}" alt="${item.title}" loading="lazy">
+                ${imageHTML}
             </div>
             <div class="credential-body">
                 <h4>${item.title}</h4>
+                ${statusBadge}
                 <p class="credential-issuer">${item.issuer}</p>
                 <p class="credential-date">${item.date}</p>
-                <p class="credential-proof">${item.proof}</p>
-                ${item.link ? `<a href="${item.link}" class="credential-link" target="_blank" rel="noopener">Verify →</a>` : ''}
+                ${item.proof ? `<p class="credential-proof">${item.proof}</p>` : ''}
+                ${verifyHTML}
             </div>
         </div>
-    `).join('');
+    `;
+  }).join('');
 }
 
 renderCredentials(certifications, 'certifications-grid');
 renderCredentials(achievements, 'achievements-grid');
 
 // ========== MEDIUM RSS FETCH ==========
-const MEDIUM_RSS_URL = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@rakib_nadir&count=3';
+const MEDIUM_RSS_URL = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@rakib_nadir&count=4';
 
 const fallbackPosts = [
+  {
+    title: 'Adversarial LLM Security: Prompt Injection & Model Fingerprinting',
+    description: 'How I tested five Ollama-hosted LLMs with Garak v0.14, fingerprinted a live chatbot backend using LLMap, and mapped findings to OWASP LLM Top 10.',
+    thumbnail: 'image/powershell.webp',
+    link: 'https://medium.com/@rakib_nadir'
+  },
   {
     title: 'Advanced PowerShell Security: Defense in Depth & Adversarial Bypasses',
     description: 'Deep dive into PowerShell security mechanisms, AMSI bypasses, constrained language mode, and script block logging from an offensive perspective.',
@@ -323,7 +422,7 @@ async function fetchMediumPosts() {
     if (!res.ok) throw new Error('Network error');
     const data = await res.json();
     if (data.status === 'ok' && data.items && data.items.length > 0) {
-      const posts = data.items.slice(0, 3).map(item => {
+      const posts = data.items.slice(0, 4).map(item => {
         // Extract first image from content or use thumbnail
         let thumb = item.thumbnail || '';
         if (!thumb) {
@@ -352,7 +451,7 @@ async function fetchMediumPosts() {
   }
 }
 
-fetchMediumPosts();
+// fetchMediumPosts();
 
 // ========== CONTACT FORM ==========
 const contactForm = document.getElementById('contactForm');
