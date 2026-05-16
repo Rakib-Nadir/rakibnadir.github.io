@@ -972,6 +972,24 @@ img {
   object-fit: cover;
 }
 
+/* Two photos side by side inside a speaking card */
+.speaking-dual-image {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.speaking-dual-image .speaking-image {
+  aspect-ratio: 3 / 4;
+}
+
+/* Spacing between stacked speaking cards */
+.speaking-card + .speaking-card {
+  margin-top: 24px;
+}
+
 /* Blog grid */
 .blog-grid {
   display: grid;
@@ -1060,11 +1078,10 @@ img {
 /* ===================================================
    CONTACT
    =================================================== */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: start;
+.contact-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .contact-info h3 {
@@ -1073,9 +1090,9 @@ img {
   margin-bottom: 14px;
 }
 
-.contact-info>p {
+.contact-info > p {
   color: var(--text-secondary);
-  margin-bottom: 28px;
+  margin-bottom: 32px;
   font-size: 0.95rem;
   line-height: 1.7;
 }
@@ -1083,7 +1100,12 @@ img {
 .contact-list {
   list-style: none;
   padding: 0;
+  display: inline-flex;
+  flex-direction: column;
+  text-align: left;
 }
+
+
 
 .contact-list li {
   display: flex;
@@ -1107,53 +1129,7 @@ img {
   color: var(--accent);
 }
 
-/* Form */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.form-group label {
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-}
-
-.form-group input,
-.form-group textarea {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 12px 16px;
-  font-size: 0.9rem;
-  font-family: var(--font);
-  color: var(--text-primary);
-  outline: none;
-  transition: border-color var(--transition), box-shadow var(--transition);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 12px var(--accent-glow);
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: var(--text-muted);
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 120px;
-}
 
 /* ===================================================
    FOOTER

@@ -296,6 +296,15 @@ const certifications = [
 // ========== ACHIEVEMENTS DATA ==========
 const achievements = [
   {
+    title: 'Acknowledged Security Contributor – World Bank Group',
+    issuer: 'World Bank Group',
+    date: '',
+    image: 'Achievement & Awards/World Bank VDP.png',
+    proof: 'Recognized for responsible security contribution',
+    link: '',
+    status: 'completed'
+  },
+  {
     title: 'Hack Secure CTF WAR HOMELAB – 1st Place',
     issuer: 'Hack Secure',
     date: 'April 2025',
