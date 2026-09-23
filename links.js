@@ -1,0 +1,20 @@
+export const LINK_TARGETS = {
+  contactEmail: 'mailto:sec.rakibnadir@gmail.com',
+  contactPhone: 'tel:+8801785029110',
+  socialLinkedIn: 'https://linkedin.com/in/rakib-nadir',
+  socialFacebook: 'https://www.facebook.com/rakibnadir/',
+  socialHackTheBox: 'https://app.hackthebox.com/users/2253987',
+  socialGitHub: 'https://github.com/Rakib-Nadir',
+  socialMedium: 'https://medium.com/@rakib_nadir',
+  socialTryHackMe: 'https://tryhackme.com/p/rakibnadir',
+  facebookSession: 'https://www.facebook.com/share/p/1Efjh9CRSj/',
+  facebookPoster: 'https://www.facebook.com/photo?fbid=122156506628976771&set=a.122104470650976771',
+  blogBreakingException: 'https://medium.com/@rakib_nadir/breaking-exception-a-medium-linux-lab-writeup-d998a04ce32e',
+  blogJourney: 'https://medium.com/@rakib_nadir/how-to-start-your-cybersecurity-journey-as-a-student-the-right-way-bda6a04088b5',
+  blogHeaderBypass: 'https://medium.com/@rakib_nadir/when-a-single-header-bypasses-your-access-control-afb4644a632d',
+  blogCRTP: 'https://medium.com/@rakib_nadir/crtp-exam-preparation-and-my-experience-57e00165ff9a',
+  blogPowerShell: 'https://medium.com/@rakib_nadir/advanced-powershell-security-defense-in-depth-and-adversarial-bypasses-e1d35a12b792',
+  blogQuerier: 'https://medium.com/@rakib_nadir/hack-the-box-querier-writeup-f53f05cd09c6',
+  blogStartup: 'https://medium.com/@rakib_nadir/tryhackme-startup-ctf-write-up-8a2ced838e51',
+  resumePdf: 'Rakib_Nadir_2026.pdf'
+};
