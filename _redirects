@@ -1,4 +1,13 @@
-/about /about.html 200
-/projects /projects.html 200
-/service /service.html 200
-/contact /contact.html 200
+/index.html          /                 301
+/about.html          /about            301
+/projects.html       /projects         301
+/clients.html        /clients          301
+/certifications.html /certifications   301
+/service.html        /service          301
+/contact.html        /contact          301
+/about               /about.html          200
+/projects            /projects.html       200
+/clients             /clients.html        200
+/certifications      /certifications.html 200
+/service             /service.html        200
+/contact             /contact.html        200
